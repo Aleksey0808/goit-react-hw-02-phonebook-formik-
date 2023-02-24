@@ -5,7 +5,7 @@ import * as yup from 'yup';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
-  number: yup.number().min(10).max(16).required(),
+  number: yup.number().positive().required(),
 });
 
 const ContactForm = ({ onSubmit }) => {
